@@ -40,6 +40,9 @@ To reproduce preprocessing, download the dataset:
 
 ## Repository Structure
 
+## Repository Structure
+
+```
 ai4science-causality-eval/
 │
 ├── manual_label_TARGET.xlsx
@@ -48,16 +51,17 @@ ai4science-causality-eval/
 ├── manual_label_expanded_clean (2).xlsx
 │
 └── llm_causality_eval/
-├── TEST_SPLIT.xlsx
-├── pred_gpt-4o.csv
-├── pred_gpt-4o_fewshot.csv
-├── pred_gpt-4o-mini.csv
-├── pred_gpt-4o-mini_pp.csv
-├── pred_baseline_regex.csv
-├── model_comparison.csv
-├── errors_FN_.xlsx
-├── errors_FP_.xlsx
-├── per_discipline_*.xlsx
+    ├── TEST_SPLIT.xlsx
+    ├── pred_gpt-4o.csv
+    ├── pred_gpt-4o_fewshot.csv
+    ├── pred_gpt-4o-mini.csv
+    ├── pred_gpt-4o-mini_pp.csv
+    ├── pred_baseline_regex.csv
+    ├── model_comparison.csv
+    ├── errors_FN_*.xlsx
+    ├── errors_FP_*.xlsx
+    ├── per_discipline_*.xlsx
+```
 
 
 ---
