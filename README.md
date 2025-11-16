@@ -28,6 +28,28 @@ This work is based on the dataset:
 
 ---
 
+## Project Notebook
+
+The complete end-to-end pipeline, including preprocessing, sampling, manual label integration, inference, evaluation, and error analysis, is documented in the Jupyter notebook:
+
+### **`A Multi-Model Evaluation Pipeline for Causal Conclusion Extraction in Scientific Literature.ipynb`**
+
+This notebook includes:
+
+- dataset loading and parsing  
+- discipline extraction and sampling  
+- manual label integration  
+- creation of the final evaluation split  
+- GPT-4o, GPT-4o-mini, few-shot, and baseline inference  
+- post-processing and consistency checks  
+- error inspection (FP/FN)  
+- per-discipline evaluation  
+- generation of all CSV/XLSX outputs in this repository  
+
+This file serves as the **central reproducibility record** for the project.
+
+---
+
 ## Dataset Source
 
 The original dataset file (**AI4Science_Dataset.txt**) is **not included** because GitHub does not allow files larger than 100MB.
@@ -37,8 +59,6 @@ To reproduce preprocessing, download the dataset:
 📥 <https://arxiv.org/abs/2412.09628>
 
 ---
-
-## Repository Structure
 
 ## Repository Structure
 
@@ -103,9 +123,9 @@ Contains outputs from all evaluated models:
 - GPT-4o (few-shot)  
 - GPT-4o-mini  
 - GPT-4o-mini (post-processed)  
-- Regex keyword baseline
+- Regex keyword baseline  
 
-Each includes generated conclusions, causal labels, and relation types.
+Each includes generated conclusions, causal predictions, and relation types.
 
 ---
 
@@ -118,9 +138,9 @@ Files prefixed with:
 
 ---
 
-### 5. Per-Discipline Performance
+### 5. Per-Discipline Performance Files
 
-Files prefixed with `per_discipline_*` contain discipline-wise F1 scores for each model.
+Files beginning with `per_discipline_*` contain discipline-wise F1 scores for each model.
 
 ---
 
@@ -144,7 +164,7 @@ Files prefixed with `per_discipline_*` contain discipline-wise F1 scores for eac
    - causal classification F1  
    - relation-type accuracy  
    - discipline-level performance  
-   - false positive / false negative patterns
+   - false positive / false negative patterns  
 
 ---
 
@@ -157,7 +177,7 @@ To reproduce results:
 
 ```bash
 export OPENAI_API_KEY="your_key_here"
-```
+
 
 3.Run preprocessing and evaluation notebooks.
 4.All intermediate outputs are provided in this repository.
